@@ -31,14 +31,28 @@ html {
     clear:both;
     zoom: 1;
 }
+
+code, kbd, pre, samp {
+    font-family: monospace;
+}
+
 img{
     max-width: 100%;
 }
 
-ul {
-    list-style: none;
+ul,ol {
+    /*list-style: none;*/
+    display: block;
+    margin-left: 15px;
+    padding-left: 20px;
 }
 
+ul ul,ol ol{
+    padding-left: 15px;
+}
+ul li,ol li{
+    line-height: 1.43;
+}
 a {
     margin: 0;
     padding: 0;
@@ -192,6 +206,10 @@ blockquote {
     text-align: left;
 }
 
+.center{
+    text-align: center;
+}
+
 .right {
     text-align: right;
 }
@@ -231,6 +249,21 @@ p + p {
 mark {
     background-color: #fcf8e3;
     padding: 0.2em;
+}
+
+kbd {
+    background-color: #333333;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) inset;
+    color: #ffffff;
+    font-size: 90%;
+    padding: 2px 4px;
+}
+kbd kbd {
+    box-shadow: none;
+    font-size: 100%;
+    font-weight: 700;
+    padding: 0;
 }
 
 [disabled] {
@@ -809,6 +842,11 @@ nav a.last{
     position: relative;
 }
 
+ul.tabs{
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
 div.tabs{
     max-height: 100px;
     overflow: auto;
